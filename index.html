@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon premier site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="neumorphic neumorphic-card">
+            <h1>Login</h1>
+            <input type="text" id="username" class="neumorphic neumorphic-input" placeholder="Username">
+            <input type="password" class="neumorphic neumorphic-input" placeholder="Password">
+            <button id="sign-in-btn" class="neumorphic neumorphic-button">Sign In</button>
+            <p id="user-display" class="hidden">Nom d'utilisateur: <span id="user-name"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Sélectionner le bouton et l'input
+        const signInBtn = document.getElementById('sign-in-btn');
+        const usernameInput = document.getElementById('username');
+
+        // Fonction pour gérer la soumission du formulaire
+        signInBtn.addEventListener('click', function() {
+            const username = usernameInput.value; // Récupérer le nom d'utilisateur
+            if (username) {
+                // Stocker le nom d'utilisateur dans localStorage
+                localStorage.setItem('username', username);
+
+                // Rediriger vers la page de bienvenue
+                window.location.href = "welcome.html";
+            } else {
+                alert("Veuillez entrer un nom d'utilisateur.");
+            }
+        });
+    </script>
+</body>
+</html>

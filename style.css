@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dde1e7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.neumorphic {
+    background: #e0e5ec;
+    border-radius: 20px;
+    box-shadow: 6px 6px 12px #b8c0cc, -6px -6px 12px #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+.neumorphic-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 320px;
+    text-align: center;
+}
+
+.neumorphic-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: #e0e5ec;
+    box-shadow: 6px 6px 12px #b8c0cc, -6px -6px 12px #ffffff;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.neumorphic-input:focus {
+    box-shadow: inset 6px 6px 12px #b8c0cc, inset -6px -6px 12px #ffffff;
+}
+
+.neumorphic-button {
+    width: 40%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: #e0e5ec;
+    box-shadow: 6px 6px 12px #b8c0cc, -6px -6px 12px #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.neumorphic-button:active {
+    box-shadow: inset 6px 6px 12px #b8c0cc, inset -6px -6px 12px #ffffff;
+}
+
+#user-display {
+    display: none;
+    color: #333;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#sign-in-check:checked ~ #user-display {
+    display: block;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hidden-checkbox {
+    display: none;
+}
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="neumorphic neumorphic-card">
+            <h1>Bonjour, <span id="welcome-user"></span> !</h1>
+        </div>
+    </div>
+
+    <script>
+        // Récupérer le nom d'utilisateur depuis localStorage
+        const username = localStorage.getItem('username');
+        if (username) {
+            // Afficher le nom d'utilisateur sur la page
+            document.getElementById('welcome-user').textContent = username;
+        } else {
+            // Si pas de nom d'utilisateur, rediriger vers la page de login
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
